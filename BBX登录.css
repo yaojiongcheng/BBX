@@ -41,9 +41,10 @@ height: 500px;
 }
 .content input[type="submit"]
 {
+	cursor: pointer;
 	position: absolute;
 	margin-left: 550px;
-	margin-top: -170px;
+	margin-top: -180px;
 	width: 260px;
 	height: 50px;
 	color: white;
@@ -57,7 +58,7 @@ img{
 ab{
 	position: absolute;
 	margin-left: 625px;
-	margin-top: -390px;
+	margin-top: -380px;
 }
 h5{
 	position: absolute;
@@ -65,12 +66,24 @@ h5{
 }
 h6{
 	position: absolute;
-	margin-top: -70px;
-	margin-left: 600px;
-
+	margin-top: -60px;
+	z-index: 1;
+	margin-left: 550px;
 }
 h7{
 	position: absolute;
-	margin-top: -100px;
+	margin-top: -120px;
 	margin-left: 550px;
+}
+h8{
+	position: absolute;
+	z-index: 1;
+	margin-top: -60px;
+	margin-left: 650px;
+}
+h9{
+	position: absolute;
+	z-index: 1;
+	margin-top: -60px;
+	margin-left: 750px;
 }
