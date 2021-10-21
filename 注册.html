@@ -23,9 +23,8 @@
 	</tr>
 	<tr>
 	<td>
-		<form action="">
 	<span><label for="username">账号: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-	<input type="text" required></span>
+	<input type="text" id="ZH"></span>
 	<br/>
 	<br/>
 	</td>
@@ -33,14 +32,14 @@
 	<td>
 	<tr>
 	<span><label for="pass">密码:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-    <input type="password" required><br /></span>
+    <input type="password" id="MM"><br /></span>
 	</tr>
 	</td>
 	<br/>
 	<tr>
 	<td>
 	<span><label for="pass">确认密码:&nbsp;&nbsp;</label>
-	<input type="text" required><br /></span>
+	<input type="text" id="QRMM"><br /></span>
 	</td>
 	</tr>
 	<br/>
@@ -84,11 +83,34 @@
 	<br/>
 	<br/>
 	<span><label for="VerificationCode">验证码&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-	<input type="text" placeholder="请输入手机所收的验证码" required></span>
+	<input type="text" placeholder="请输入手机所收的验证码" id="YZM"></span>
 	<dic class="content">
-	<input type="submit" value="注		册"/>
+	<input type="submit" value="注		册" id="C" onClick="getvalue()"/>
+	<script>
+		function getvalue() {
+		var str=document.getElementById('ZH').value;
+		if(str.replace().length==0){
+			alert('账号不能为空');
+			return false;
+		}
+		var str=document.getElementById('MM').value;
+		if(str.replace().length==0){
+			alert('密码不能为空');
+			return false;
+		}
+		var str=document.getElementById('QRMM').value;
+		if(str.replace().length==0){
+			alert('确认密码不能为空');
+			return false;
+		}
+		var str=document.getElementById('YZM').value;
+		if(str.replace().length==0){
+			alert('验证码不能为空');
+			return false;
+		}
+	}
+		</script>
 	</dic>
-</from>
 </form>
 </body>
 </html>

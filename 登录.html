@@ -35,24 +35,36 @@
 	</tr>
 	<tr>
 	<td>
-	<form action="">
 	<span><label for="username">账号:</label>
-	<input type="text" required><br /></span>
+	<input type="text" id="ZH"><br /></span>
 	</td>
 	</tr>
 	<td>
 	<tr>
 	<span><label for="pass">密码:</label>
-    <input type="password" required><br /></span>
+    <input type="password" id="MM"><br /></span>
 
 </tr>
 	</td>
 	<input type="checkbox" checked="checked">	记住密码&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="">忘记密码？</a>
 </divs>
 	<dic class="content">
-	<input type="submit" value="登		录" id="A" onsubmit="return a"/>
-	</dic>	
-</form>
+	<input type="submit" value="登		录" id="A" onsubmit="return a" onClick="getvalue()"/>
+	<script>
+		function getvalue() {
+		var str=document.getElementById('ZH').value;
+		if(str.replace().length==0){
+			alert('账号不能为空');
+			return false;
+		}
+		var str=document.getElementById('MM').value;
+		if(str.replace().length==0){
+			alert('密码不能为空');
+			return false;
+		}
+	}
+		</script>
+	</dic>
 <tr>
 	<h7><td>第三方登录</td>
 	<hr/></h7>
