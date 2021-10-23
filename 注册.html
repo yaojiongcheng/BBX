@@ -4,86 +4,93 @@
 <meta charset = "UTF-8">
 <title>BBX</title>
 <link href="BBX注册.css" rel="stylesheet" type="text/css" />
+<script src="1.js" charset="utf-8"></script>
 <title>input-placeholder</title>
 </head>
 <div>
-<body background="bg.jpeg">
-	<h5><img src="logo.png" alt="BBX"></h5>
+<body onload='getProvince()' background="bg.jpeg">
+	<img src="logo.png" alt="BBX">
 </div>
 	<form method="post" action="save.php">
 	<divs>
 	<table>
 	<tr>
-	<a href="登录.html"><h3>登录</h3></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="注册.html"><h2>注册</h2></a>
-	<hr />
+	<a href="登录.html"><dl>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;登录&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</dl></a>
+	<a href="注册.html"><zc>注册&nbsp;&nbsp;&nbsp;</zc></a>
 	</tr>
 	</table>
 	<tr>
 	</tr>
 	<tr>
 	<td>
+		<p>
 	<span><label for="username">账号: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-	<input type="text" id="ZH" style="background-color:rgb(250, 246, 246);border: silver; height: 20px;"></span>
-	<br/>
-	<br/>
+	<input type="text" id="ZH" style="background-color:rgb(240, 240, 240);border: white; height: 25px;width: 170px;"></span>
+		</p>
 	</td>
 	</tr>
 	<td>
 	<tr>
+		<p>
 	<span><label for="pass">密码:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-    <input type="password" id="MM" style="background-color:rgb(250, 246, 246);border: silver; height: 20px;"><br /></span>
+    <input type="password" id="MM" style="background-color:rgb(240, 240, 240);border:white;height: 25px;width: 170px;"></span>
 	</tr>
 	</td>
-	<br/>
 	<tr>
 	<td>
+		<p>
 	<span><label for="pass">确认密码:&nbsp;&nbsp;</label>
-	<input type="text" id="QRMM" style="background-color:rgb(250, 246, 246);border: silver; height: 20px;"><br /></span>
+	<input type="text" id="QRMM" style="background-color:rgb(240, 240, 240);border: white; height: 25px;width: 170px;"><br /></span>
 	</td>
 	</tr>
-	<br/>
+		</p>
 	<tr>
 	<td>
+		<p>
 	<span>性别
 	<dix class="exe">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;男
 	<input type="radio" value="1" name="gender" checked="checked"/>
 	女
-	<input type="radio" value="2" name="gender" />
+	<input type="radio" value="2" name="gender"/>
 	</dix>
 	</span>
 	</td>
 	</tr>
-	<br/>
-	<br/>
+	</p>
 	<td>
-	<tr>所在地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<select>
-		<option value="中国">中国</option>
-	</select>
-	<select>
-		<option value="韶关">韶关</option>
-	</select>
-	<select>
-		<option value="浈江区">浈江区</option>
-	</select>
+		<p>
+	<tr>
+		<td>所在地</td>
+		<td>
+			<select id="province" onchange="chooseProvince(this)">
+				<option value="1">广东省</option>
+			</select>
+			<select id="city" onchange="chooseCity(this)">
+				<option value="2">韶关市</option>
+			</select>
+			<select id="area">
+				<option value="3">浈江区</option>
+			</select>
+		</td>
+	</tr>
 	</tr>
 	</td>
-	<br/>
-	<br/>
+		</p>
+		<p>
 	兴趣爱好&nbsp;
-	<input type="checkbox" name="checkbox1" value="学习" checked="checked"/>学习
+	<input type="checkbox" name="checkbox1" value="学习" checked="checked">学习
 	<input type="checkbox" name="checkbox2" value="运动">运动
-	<input type="checkbox" name="checkbox3" value="旅游">旅游
-	<input type="checkbox" name="checkbox4" value="摄影" checked="checked"/>摄影
-	<br/>
-	<br/>
+	<input type="checkbox" name="checkbox3" value="旅游" >旅游
+	<input type="checkbox" name="checkbox4" value="摄影" checked="checked">摄影
+		</p>
+		<p>
 	上传头像&nbsp;
-	<input type="submit" value="选择文件"/>未选择任何文件
-	<br/>
-	<br/>
-	<span><label for="VerificationCode" >验证码&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-	<input type="text" placeholder="请输入手机所收的验证码" id="YZM" style="background-color:rgb(250, 246, 246);border:silver; height: 20px;"></span>
+	<input type="submit" value="选择文件" style="background-color:rgb(240, 240, 240);border:1px solid black; font-size: 12px;"/>&nbsp;<h>未选择任何文件</h>
+		</p>
+		<p>
+	<span><label for="VerificationCode" >验证码&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></span>
+	<input type="text" placeholder="请输入手机所收的验证码" id="YZM" style="background-color:rgb(250, 246, 246);border:silver; height: 20px;">
+		</p>
 	<dic class="content">
 	<input type="submit" value="注		册" id="C" onClick="getvalue()"/>
 	<script>
@@ -93,12 +100,12 @@
 			alert('账号不能为空');
 			return false;
 		}
-		var str=document.getElementById('MM').value;
+		var MM=document.getElementById('MM').value;
 		if(str.replace().length==0){
 			alert('密码不能为空');
 			return false;
 		}
-		var str=document.getElementById('QRMM').value;
+		var QRMM=document.getElementById('QRMM').value;
 		if(str.replace().length==0){
 			alert('确认密码不能为空');
 			return false;
@@ -107,6 +114,10 @@
 		if(str.replace().length==0){
 			alert('验证码不能为空');
 			return false;
+		}
+		if(MM!=QRMM)
+		{
+			alert('两次密码不相同');
 		}
 	}
 		</script>
