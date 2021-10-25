@@ -5,10 +5,21 @@ span{
 }
 /*背景图*/
 body{
-	background-size:auto 820px;
+	background-size:auto 800px;
+}
+/*logo.png*/
+div{
+	margin-left: 150px;
+	margin-top:200px;
+	border-radius: 3%;
+	position: relative;
 }
 /*登录*/
-dl{
+.login{
+	position: absolute;
+	margin-top:-273px;
+	margin-left: 270px;
+	text-decoration: none;
 	font-family: 宋体;
 	color:black;
 	font-size:18px;
@@ -19,7 +30,11 @@ dl{
 	padding-bottom: 10px;
 }
 /*注册*/
-zc{
+.register{
+	margin-top:-273px;
+	margin-left: 280px;
+	position: absolute;
+	text-decoration: none;
 	font-family: 宋体;
 	color:rgb(30, 146, 255);
 	font-size: 18px;
@@ -28,34 +43,22 @@ zc{
 	cursor: pointer;
 	border-bottom: 1px solid rgba(216, 216, 216, 0.877);
 	padding-bottom: 10px;
+	left: 200px;
 }
-/*logo.png*/
-div{
+/*白色背景图*/
+.whiteground{
+	width: 590px;
+	height: 400px;
 	background-color: white;
-	margin-left: 150px;
-	width:580px;
-	height:400px;
-	padding-left:0px;
-	margin-top:200px;
-	border-radius: 3%;
 	box-shadow: -15px -15px 5px #c7e1f7;
-	position: relative;
-}
-/*登录一直到记住密码*/
-divs{
-position: absolute;
-padding-left:400px;
-margin-top:-400px;
-height: 500px;
-font-size: 15px;
 }
 /*按钮*/
 .content input[type="submit"]
 {
-	cursor: pointer;
 	position: absolute;
-	margin-left:10px;
-	margin-top: 0px;
+	cursor: pointer;
+	margin-left:150px;
+	margin-top: -180px;
 	width: 250px;
 	height: 30px;
 	color: white;
@@ -69,11 +72,53 @@ img{
 	margin-top: 100px;
 	width: 200px;
 }
-/*行间距*/
-p{
-	margin: 10px;
+/*性别*/
+.sex{
+	margin-top: -20px;
+	margin-left: 253px;
 }
-/*选择文件和为选择如何文件的文字大小*/
-h{
-	font-size: 12px;
+/*所在地*/
+.place{
+	margin-top: -10px;
+	margin-left: 297px;
+}
+/*账号*/
+.username{
+	margin-left: 300px;
+	margin-top: -250px;
+}
+/*密码*/
+.pass{
+	margin-top:	-20px;
+	margin-left: 300px;
+}
+/*确认密码*/
+.password{
+	margin-top: -20px;
+	margin-left: 297px;
+}
+/*兴趣爱好*/
+.hobby{
+	margin-top: -10px;
+	margin-left: 297px;
+}
+/*选择文件*/
+.avatar{
+	margin-top: -20px;
+	margin-left: 370px;
+}
+/*上传头像*/
+.upload{
+	margin-top: 10px;
+	margin-left: 297px;
+}
+/*验证码*/
+.VerificationCode{
+	margin-top: -10px;
+	margin-left: 297px;
+}
+/*请输入验证码*/
+.code{
+	margin-top: -20px;
+	margin-left: 185px;
 }

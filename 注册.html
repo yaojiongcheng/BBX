@@ -4,95 +4,93 @@
 <meta charset = "UTF-8">
 <title>BBX</title>
 <link href="BBX注册.css" rel="stylesheet" type="text/css" />
-<script src="1.js" charset="utf-8"></script>
-<title>input-placeholder</title>
+<script charset="utf-8"></script>
 </head>
-<div>
-<body onload='getProvince()' background="bg.jpeg">
+<body background="bg.jpeg">
+	<div class="whiteground">
 	<img src="logo.png" alt="BBX">
-</div>
-	<form method="post" action="save.php">
-	<divs>
-	<table>
-	<tr>
-	<a href="登录.html"><dl>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;登录&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</dl></a>
-	<a href="注册.html"><zc>注册&nbsp;&nbsp;&nbsp;</zc></a>
-	</tr>
-	</table>
+	<form>
+	<a href="登录.html" class="login">&nbsp;&nbsp;&nbsp;&nbsp;登录&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+	<a href="注册.html" class="register">注册&nbsp;&nbsp;&nbsp;</a>
+	<br/>
 	<tr>
 	</tr>
 	<tr>
 	<td>
-		<p>
-	<span><label for="username">账号: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-	<input type="text" id="ZH" style="background-color:rgb(240, 240, 240);border: white; height: 25px;width: 170px;"></span>
-		</p>
+	<span>
+	<div class="username">
+	<label for="username">账号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>	
+	<input type="text" id="ZH" style="background-color:rgb(240, 240, 240);border: white; height: 25px;width: 170px; margin: 5px;" maxlength="20"></span>
+	</div>
 	</td>
+	<br/>
 	</tr>
 	<td>
 	<tr>
-		<p>
-	<span><label for="pass">密码:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-    <input type="password" id="MM" style="background-color:rgb(240, 240, 240);border:white;height: 25px;width: 170px;"></span>
+	<div class="pass">
+	<span><label for="pass">密码&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+    <input type="password" id="MM" style="background-color:rgb(240, 240, 240);border:white;height: 25px;width: 170px; margin: 5px;" maxlength="20"></span>
+	</div>
 	</tr>
 	</td>
 	<tr>
 	<td>
-		<p>
-	<span><label for="pass">确认密码:&nbsp;&nbsp;</label>
-	<input type="text" id="QRMM" style="background-color:rgb(240, 240, 240);border: white; height: 25px;width: 170px;"><br /></span>
+	<br/>
+	<span>
+	<div class="password">
+	<label for="pass">确认密码</label>
+	<input type="text" id="QRMM" style="background-color:rgb(240, 240, 240);border: white; height: 25px;width: 170px; margin: 5px;" maxlength="20"></span>
+	</div>
 	</td>
 	</tr>
-		</p>
+	<br/>
 	<tr>
 	<td>
-		<p>
-	<span>性别
-	<dix class="exe">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;男
-	<input type="radio" value="1" name="gender" checked="checked"/>
-	女
-	<input type="radio" value="2" name="gender"/>
-	</dix>
-	</span>
-	</td>
+	<div class="sex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;性别&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="radio" value="1" name="gender" checked="checked" style="margin: 5px;"/>男
+	<input type="radio" value="2" name="gender" style="margin: 5px;"/>女</span>
+	</div>
 	</tr>
-	</p>
+	<br/>
 	<td>
-		<p>
 	<tr>
-		<td>所在地</td>
-		<td>
-			<select id="province" onchange="chooseProvince(this)">
-				<option value="1">广东省</option>
-			</select>
-			<select id="city" onchange="chooseCity(this)">
-				<option value="2">韶关市</option>
-			</select>
-			<select id="area">
-				<option value="3">浈江区</option>
-			</select>
-		</td>
+	<div class="place">所在地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<select id="province">
+	<option value="1">中国</option>
+	</select>
+	<select id="city">
+	<option value="2">韶关</option>
+	</select>
+	<select id="area">
+	<option value="3">浈江区</option>
+	</select>
+	</div>
+	</td>
 	</tr>
 	</tr>
 	</td>
-		</p>
-		<p>
+	<br/>
+	<div class="hobby">
 	兴趣爱好&nbsp;
 	<input type="checkbox" name="checkbox1" value="学习" checked="checked">学习
 	<input type="checkbox" name="checkbox2" value="运动">运动
 	<input type="checkbox" name="checkbox3" value="旅游" >旅游
 	<input type="checkbox" name="checkbox4" value="摄影" checked="checked">摄影
-		</p>
-		<p>
-	上传头像&nbsp;
-	<input type="submit" value="选择文件" style="background-color:rgb(240, 240, 240);border:1px solid black; font-size: 12px;"/>&nbsp;<h>未选择任何文件</h>
-		</p>
-		<p>
-	<span><label for="VerificationCode" >验证码&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></span>
-	<input type="text" placeholder="请输入手机所收的验证码" id="YZM" style="background-color:rgb(250, 246, 246);border:silver; height: 20px;">
-		</p>
-	<dic class="content">
-	<input type="submit" value="注		册" id="C" onClick="getvalue()"/>
+	</div>
+	<div class="upload">上传头像</div>
+	<div class="avatar">
+	<input type="file" id="selectfile" value="选择文件"/>
+	</div>	
+	<br/>
+	<span>
+	<div class="VerificationCode">
+	<label for="VerificationCode" >验证码&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></span></div>
+	<div class="code">
+	<input class="code" type="text" maxlength="6" oninput="value=value.replace(/[^\d]/g,'')" placeholder="请输入手机所收的验证码" id="YZM" style="background-color:rgb(240, 240, 240);border:white; height: 25px; width:170px;">
+	</div>
+	<div class="content">
+	<input type="submit" value="注		册" id="C" onClick="getvalue()"/>	
+	</div>
 	<script>
 		function getvalue() {
 		var str=document.getElementById('ZH').value;
@@ -120,8 +118,7 @@
 			alert('两次密码不相同');
 		}
 	}
-		</script>
-	</dic>
+	</script></divs>
 </form>
 </body>
 </html>
